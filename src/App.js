@@ -9,7 +9,7 @@ import {
 import Header from './partials/Header'
 import Footer from './partials/Footer'
 import Homepage from './pages/Homepage'
-import Documentation from './pages/Documentation'
+import Docs from './pages/Docs'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Homepage} />
 
-        <Route exact path="/docs/:list" component={Documentation} />
+        <Route exact path="/docs/:list" component={Docs} />
 
         <Route path="*">
           <Redirect to="/" />
