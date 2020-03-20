@@ -1,0 +1,9 @@
+.banner {
+  background: rgb(8, 148, 252);
+  background: radial-gradient(
+    circle,
+    rgba(8, 148, 252, 1) 0%,
+    rgba(3, 88, 184, 1) 100%
+  );
+  height: 25em;
+}

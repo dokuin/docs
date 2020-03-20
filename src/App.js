@@ -9,6 +9,7 @@ import {
 import Header from './partials/Header'
 import Footer from './partials/Footer'
 import Homepage from './pages/Homepage'
+import Documentation from './pages/Documentation'
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />
+
+        <Route exact path="/docs/:list" component={Documentation} />
 
         <Route path="*">
           <Redirect to="/" />

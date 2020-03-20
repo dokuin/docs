@@ -1,0 +1,29 @@
+.font-large {
+  font-size: large;
+}
+
+.font-xlarge {
+  font-size: x-large;
+}
+
+.font-xxlarge {
+  font-size: xx-large;
+}
+
+.router-link {
+  transition: 0.1s;
+}
+.router-link:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+.section {
+  min-height: 15em;
+}
+
+.image-placeholder {
+  height: 10em;
+  width: 10em;
+  background-color: aquamarine;
+}
