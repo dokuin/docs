@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row, Container, Button } from "react-bootstrap";
-import { useState } from 'reac'
+import { makeStyles } from '@material-ui/core/styles';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+    marginTop: '2vh'
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+}));
+
 
 const Documentation = () => {
+  const classes = useStyles();
+  const [open, setOpen] = useState(true);
 
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
   return (
     <Container fluid>
@@ -19,76 +42,65 @@ const Documentation = () => {
           sm={2}
         >
           {/* list of sidebar */}
-          <div className="mt-5">
-            <a
-            className="px-3"
-              style={{
-                backgroundColor: "grey",
-                display: "flex",
-                justifyContent: 'space-between',
-              }}
-              onClick={()=> showList()}
-            >
-              <h5 style={{}}>TITLE</h5>
-              <h5>></h5>
-            </a>
-            
+          <div className={classes.root}>
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>Expansion Panel 1</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
             <ul>
-              <li>list</li>
-              <li>list</li>
-              <li>list</li>
-              <li>list</li>
-              <li>list</li>
-              <li>list</li>
+              <li>
+              <a href="">link to </a>
+              </li>
+              <li>
+              <a href="">link to </a>
+              </li>
+              <li>
+              <a href="">link to </a>
+              </li>
+              <li>
+              <a href="">link to </a>
+              </li>
             </ul>
-          </div>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography className={classes.heading}>Expansion Panel 2</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            sit amet blandit leo lobortis eget.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel disabled>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3a-content"
+          id="panel3a-header"
+        >
+          <Typography className={classes.heading}>Disabled Expansion Panel</Typography>
+        </ExpansionPanelSummary>
+      </ExpansionPanel>
+    </div>
         </Col>
         <Col>
           <Row>
             <Col sm={2}>{/* empty content for sidebar space */}</Col>
             <Col sm={10}>
-              <h1>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-                qui autem dolores repellat commodi debitis consequuntur quae
-                pariatur sed eaque fuga ducimus rem, aspernatur maiores officiis
-                sapiente quibusdam id expedita.
-              </h1>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-                voluptatum labore consequatur cupiditate maxime tempore, cum
-                repellendus eligendi suscipit dolorum et quasi veritatis numquam
-                excepturi accusamus molestias impedit repellat omnis?
-              </h1>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-                voluptatum labore consequatur cupiditate maxime tempore, cum
-                repellendus eligendi suscipit dolorum et quasi veritatis numquam
-                excepturi accusamus molestias impedit repellat omnis?
-              </h1>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-                voluptatum labore consequatur cupiditate maxime tempore, cum
-                repellendus eligendi suscipit dolorum et quasi veritatis numquam
-                excepturi accusamus molestias impedit repellat omnis?
-              </h1>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-                voluptatum labore consequatur cupiditate maxime tempore, cum
-                repellendus eligendi suscipit dolorum et quasi veritatis numquam
-                excepturi accusamus molestias impedit repellat omnis?
-              </h1>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-                voluptatum labore consequatur cupiditate maxime tempore, cum
-                repellendus eligendi suscipit dolorum et quasi veritatis numquam
-                excepturi accusamus molestias impedit repellat omnis?
-              </h1>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-                voluptatum labore consequatur cupiditate maxime tempore, cum
-                repellendus eligendi suscipit dolorum et quasi veritatis numquam
-                excepturi accusamus molestias impedit repellat omnis?
-              </h1>
+            
             </Col>
           </Row>
         </Col>
