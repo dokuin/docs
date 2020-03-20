@@ -1,15 +1,17 @@
 import React from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-success">
+    <Navbar collapseOnSelect expand="lg" className="bg-success" fixed='top'
+    >
       <Container>
-        <Navbar.Brand href="#">Dokuin.Js</Navbar.Brand>
+        <Navbar.Brand as={Link} to='/' >Dokuin.Js</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#features">Docs</Nav.Link>
+            <Nav.Link as={Link} to='/docs' >Docs</Nav.Link>
             <Nav.Link href="#pricing">Template</Nav.Link>
           </Nav>
           <Nav>
