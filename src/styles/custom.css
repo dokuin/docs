@@ -29,6 +29,25 @@
 }
 
 .nav-link {
+  transition: 0.3s;
+  color: black;
+}
+
+.nav-link:hover {
+  color: blue;
+}
+
+.accordion-item {
+  border-radius: unset !important;
+  border: none !important;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.accordion-toggle:hover {
   color: black;
 }
 
