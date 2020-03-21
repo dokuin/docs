@@ -5,7 +5,7 @@ import Banner from '../components/homepage/Banner'
 
 const Homepage = () => {
   return (
-    <div className="mt-5">
+    <div className="mb-5">
       <Banner />
 
       <div

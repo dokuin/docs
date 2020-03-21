@@ -6,11 +6,11 @@ const Footer = () => {
     <div
       className="footer py-3 m-0"
       style={{
-        position:'fixed',
+        position: 'fixed',
         backgroundColor: '#0085d7',
-        zIndex:'2',
-        bottom:'0',
-        width:'100%'
+        zIndex: '2',
+        bottom: '0',
+        width: '100%'
       }}
     >
       <Container className="d-flex justify-content-center">
