@@ -6,27 +6,43 @@ import GetStarted from '../components/Docs/GetStarted'
 import Usage from '../components/Docs/Usage'
 import Sidebar from '../components/Docs/Sidebar'
 
+
+
 const Documentation = () => {
   return (
-    <Container className="my-5" fluid>
+    <>
+    <Col
+    sm={2}
+    md={2}
+    className="overflow-auto position-fixed"
+    id="sticky-sidebar"
+    style={{ 
+      height:'100%',
+      zIndex:'1',
+      width:'100%',
+      backgroundColor:"#e6e6e6"
+       }}
+  >
+    <Sidebar />
+  </Col>
+    <Container fluid>
       <Row className="m-3">
-        <Col
+          <Col 
           sm={2}
-          md={2}
-          className="d-flex align-items-center overflow-auto shadow"
-          style={{ backgroundColor: '#5194ff' }}
-        >
-          <Sidebar />
-        </Col>
-        <Col>
+          md={2}>
+          </Col>
+       
+        <Col style={{
+          marginLeft:'20px',
+        }}>
           <Switch>
             <Route exact path="/docs/get-started" component={GetStarted} />
-
             <Route exact path="/docs/usage" component={Usage} />
           </Switch>
         </Col>
       </Row>
     </Container>
+    </>
   )
 }
 

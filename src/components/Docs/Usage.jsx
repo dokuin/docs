@@ -5,8 +5,8 @@ import CodeBlock from '../CodeBlock'
 const Usage = () => {
   return (
     <div
-      className="ml-3 p-3 shadow-lg"
-      style={{ fontSize: 'smaller', backgroundColor: '#4fd0f9c1' }}
+      className="ml-3 p-3 "
+      style={{ fontSize: 'smaller' }}
     >
       <h4>Usage</h4>
       <h6>Example on how to use Dokuin.js</h6>
