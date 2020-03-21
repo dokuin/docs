@@ -47,9 +47,12 @@ const Sidebar = () => {
                 <Link style={{
                   textDecoration:'none',
                   color:'black'
-              }} to="/docs/get-started">Depedency</Link>
+              }} to="/docs/getting-started">Installation</Link>
               </li>
-              <li>Installation</li>
+              <Link style={{
+                  textDecoration:'none',
+                  color:'black'
+              }} to="/docs/next-step">Next Step</Link>
             </ul>
           </Typography>
         </ExpansionPanelDetails>
