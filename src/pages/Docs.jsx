@@ -2,13 +2,14 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Switch, Route } from 'react-router-dom'
 
-import GetStarted from '../components/Docs/GetStarted'
-import Usage from '../components/Docs/Usage'
-import Sidebar from '../components/Docs/Sidebar'
+import Installation from '../components/docs/getStarted/Installation'
+import NextStep from '../components/docs/getStarted/NextStep'
+import Usage from '../components/docs/Usage'
+import Sidebar from '../components/docs/Sidebar'
 
 
 
-const Documentation = () => {
+const Docs = () => {
   return (
     <>
     <Col
@@ -36,7 +37,9 @@ const Documentation = () => {
           marginLeft:'20px',
         }}>
           <Switch>
-            <Route exact path="/docs/get-started" component={GetStarted} />
+            <Route exact path="/docs/getting-started" component={Installation} />
+            <Route exact path="/docs/next-step" component={NextStep} />
+
             <Route exact path="/docs/usage" component={Usage} />
           </Switch>
         </Col>
@@ -46,4 +49,4 @@ const Documentation = () => {
   )
 }
 
-export default Documentation
+export default Docs
