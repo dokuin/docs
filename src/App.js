@@ -10,6 +10,7 @@ import Header from './partials/Header'
 import Footer from './partials/Footer'
 import Homepage from './pages/Homepage'
 import Docs from './pages/Docs'
+import Documentation from './pages/Documentation'
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route exact path="/" component={Homepage} />
 
         <Route exact path="/docs/:list" component={Docs} />
+        <Route exact path="/docs" component={Documentation} />
+
 
         <Route path="*">
           <Redirect to="/" />

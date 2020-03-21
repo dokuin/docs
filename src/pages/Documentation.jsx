@@ -11,7 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    marginTop: '2vh'
+    marginTop: '2vh',
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -28,79 +28,18 @@ const Documentation = () => {
   // };
 
   return (
-    <Container fluid>
+    <Container  fluid>
       <Row className="mt-5">
         <Col
           className="position-fixed"
           id="sticky-sidebar"
           style={{
             height: '100%',
-            backgroundColor: '#f0f0f0',
             borderRight: '1px solid #cccccc'
           }}
           sm={2}
         >
           {/* list of sidebar */}
-          <div className={classes.root}>
-            <ExpansionPanel>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography className={classes.heading}>
-                  Expansion Panel 1
-                </Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                  <ul>
-                    <li>
-                      <Link href="#">link to </Link>
-                    </li>
-                    <li>
-                      <Link href="#">link to </Link>
-                    </li>
-                    <li>
-                      <Link href="#">link to </Link>
-                    </li>
-                    <li>
-                      <Link href="#">link to </Link>
-                    </li>
-                  </ul>
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
-                id="panel2a-header"
-              >
-                <Typography className={classes.heading}>
-                  Expansion Panel 2
-                </Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel disabled>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel3a-content"
-                id="panel3a-header"
-              >
-                <Typography className={classes.heading}>
-                  Disabled Expansion Panel
-                </Typography>
-              </ExpansionPanelSummary>
-            </ExpansionPanel>
-          </div>
         </Col>
         <Col>
           <Row>
