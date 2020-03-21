@@ -1,17 +1,18 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 const Footer = () => {
   return (
-    <div 
-    className="bg-dark text-white text-center py-3"
-    style={{
-      position:'fixed',
-      bottom:'0',
-      width:'100%'
-      
-    }}
+    <div
+      className="footer py-3 m-0"
+      style={{
+        backgroundColor: '#0085d7',
+        minHeight: '100%'
+      }}
     >
-      <small>Copyright © 2020 Dokuin.Js Team</small>
+      <Container className="d-flex justify-content-center">
+        <small className="text-center">Copyright © 2020 Dokuin.Js Team</small>
+      </Container>
     </div>
   )
 }
