@@ -11,7 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    marginTop: '2vh'
+    marginTop: '2vh',
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -29,7 +29,7 @@ const Documentation = () => {
   };
 
   return (
-    <Container fluid>
+    <Container  fluid>
       <Row className="mt-5">
         <Col
           className="position-fixed"
@@ -42,7 +42,8 @@ const Documentation = () => {
           sm={2}
         >
           {/* list of sidebar */}
-          <div className={classes.root}>
+          <div 
+          className={classes.root}>
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
