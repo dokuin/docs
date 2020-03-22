@@ -14,7 +14,10 @@ const useStyles = makeStyles((theme) => ({
   },
   bgList: {
     backgroundColor: '#e6e6e6',
-    boxShadow: 'none'
+    boxShadow: 'none',
+    "&:hover": {
+      background: "#efefef"
+    }
   },
   details: {
     paddingBottom: '0'
@@ -39,50 +42,41 @@ const Sidebar = () => {
           <Typography className={classes.heading}>Geting Started</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.details}>
-          <Typography>
-            <ul style={{ listStyle: 'none', paddingBottom: '0' }}>
-              <li>
-                <Link
-                  style={{
-                    textDecoration: 'none',
-                    color: 'black'
-                  }}
-                  to="/docs/getting-started"
-                >
-                  Installation
-                </Link>
+          
+             <ul style={{ listStyle: "none", paddingBottom: "0" }}>
+              <li style={{
+                marginBottom:'10px'
+              }}>
+              <Link style={{
+                textDecoration:'none',
+                color:'black',
+              }} to="/docs/getting-started">Installation</Link>
               </li>
-              <Link
-                style={{
-                  textDecoration: 'none',
-                  color: 'black'
-                }}
-                to="/docs/next-step"
-              >
-                Next Step
-              </Link>
-            </ul>
+              <li style={{
+                marginBottom:'10px'
+              }}>
+              <Link style={{
+                textDecoration:'none',
+                color:'black'
+              }} to="/docs/usage">Usage</Link>
+              </li>
+            </ul> 
+            <Typography>
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
       <ExpansionPanel className={classes.bgList}>
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>Usage</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails className={classes.details}>
-          <Typography>
-            <ul style={{ listStyle: 'none' }}>
-              <li>
-                <Link to="/docs/usage">Initialize</Link>
-              </li>
-            </ul>
-          </Typography>
-        </ExpansionPanelDetails>
+        <Link 
+        style={{
+          textDecoration:'none',
+          color:'black'
+        }}
+        to='/docs/example'>
+          <div className="d-flex align-items-center justify-content-start pl-4 py-2">
+          <Typography className={classes.heading}>Example</Typography>
+          </div>
+          </Link>
       </ExpansionPanel>
     </div>
   )

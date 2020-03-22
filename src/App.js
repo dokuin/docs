@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Homepage} />
 
-        <Route path="/docs/:list" component={Docs} />
+        <Route path="/:docs/:list" children={<Docs/>} />
 
         <Route path="*">
           <Redirect to="/" />

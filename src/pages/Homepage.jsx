@@ -8,7 +8,7 @@ const Homepage = () => {
   return (
     <div
       style={{
-        marginTop: '-10vh'
+        marginTop: ''
       }}
       className="mb-5"
     >
