@@ -33,9 +33,6 @@ const Header = () => {
             </Nav.Link>
           </Nav>
         </div>
-        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-        </Navbar.Collapse> */}
       </Container>
     </Navbar>
   )
