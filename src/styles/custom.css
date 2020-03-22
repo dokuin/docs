@@ -6,6 +6,20 @@
   height: 25em;
 }
 
+.banner-btn {
+  text-decoration: none;
+  padding: 1.5vh 1.5vw;
+  border-radius: 1vh;
+  color: white;
+  background-color: #31475f;
+}
+
+.banner-btn:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #59adb5;
+}
+
 .font-large {
   font-size: large;
 }
