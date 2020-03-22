@@ -9,41 +9,49 @@ const Header = () => {
       collapseOnSelect
       expand="lg"
       className="shadow-lg"
-      style={{ backgroundColor: '#216BBD' }}
+      style={{ backgroundColor: 'transparant' }}
       sticky="top"
     >
       <Container>
         <Link to="/" className="router-link">
           <Navbar.Brand as="div" href="#">
-            <Image src={DokuinImage} fluid={true} width={50} height={50} />
+            <Image src={DokuinImage}  height={50} />
           </Navbar.Brand>
         </Link>
 
-        <Link to="/" className="router-link">
+        {/* <Link to="/" className="router-link">
           <Navbar.Brand as="div" className="text-white">
             Dokuin.Js
           </Navbar.Brand>
-        </Link>
+        </Link> */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="ml-auto">
             <Link to="/docs/getting-started" className="router-link">
-              <Nav.Link as="div" className="text-white">
+              <Nav.Link as="div" className="mx-3 text-white">
                 Docs
               </Nav.Link>
             </Link>
-            <Nav.Link href="#pricing" className="text-white">
-              Template
-            </Nav.Link>
+            <Link to="/docs/getting-started" className="router-link">
+              <Nav.Link as="div" className="mx-3 text-white">
+                Template
+              </Nav.Link>
+            </Link>
+            <Link to="/docs/getting-started" className="router-link">
+              <Nav.Link as="div" className="mx-3 text-white">
+                Template
+              </Nav.Link>
+            </Link>
+            
           </Nav>
-          <Nav>
+          {/* <Nav>
             <Nav.Link href="#deets" className="text-white">
               Template
             </Nav.Link>
             <Nav.Link eventKey={2} href="#memes" className="text-white">
               Template
             </Nav.Link>
-          </Nav>
+          </Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

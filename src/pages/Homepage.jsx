@@ -5,8 +5,9 @@ import Banner from '../components/homepage/Banner'
 
 const Homepage = () => {
   return (
-    <div className="mt-5">
-      <Banner />
+
+    <div className="">
+    <Banner />
 
       <div
         className="section d-flex align-items-center justify-content-center"

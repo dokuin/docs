@@ -41,19 +41,20 @@ const Sidebar = () => {
           <Typography className={classes.heading}>Geting Started</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.details}>
-          <Typography>
-            <ul style={{ listStyle: "none", paddingBottom: "0" }}>
+          
+             <ul style={{ listStyle: "none", paddingBottom: "0" }}>
               <li>
-                <Link style={{
-                  textDecoration:'none',
-                  color:'black'
+              <Link style={{
+                textDecoration:'none',
+                color:'black'
               }} to="/docs/getting-started">Installation</Link>
               </li>
               <Link style={{
-                  textDecoration:'none',
-                  color:'black'
-              }} to="/docs/next-step">Next Step</Link>
-            </ul>
+                textDecoration:'none',
+                color:'black'
+              }} to="/docs/usage">Usage</Link>
+            </ul> 
+            <Typography>
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -68,11 +69,11 @@ const Sidebar = () => {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.details}>
           <Typography>
-            <ul style={{ listStyle: "none" }}>
+            {/* <ul style={{ listStyle: "none" }}>
               <li>
                 <Link to="/docs/usage">Initialize</Link>
               </li>
-            </ul>
+            </ul> */}
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
