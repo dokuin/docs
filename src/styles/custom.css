@@ -1,10 +1,8 @@
 .banner {
-  background: rgb(8, 148, 252);
-  background: radial-gradient(
-    circle,
-    rgba(8, 148, 252, 1) 0%,
-    rgba(3, 88, 184, 1) 100%
-  );
+  background: url('../assets/Group\ 1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 25em;
 }
 
@@ -52,7 +50,7 @@
 }
 
 .section {
-  min-height: 15em;
+  min-height: 40vh;
 }
 
 .image-placeholder {

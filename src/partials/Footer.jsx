@@ -7,14 +7,16 @@ const Footer = () => {
       className="footer py-3 m-0"
       style={{
         position: 'fixed',
-        backgroundColor: '#0085d7',
+        backgroundColor: '#2C4054',
         zIndex: '2',
         bottom: '0',
         width: '100%'
       }}
     >
       <Container className="d-flex justify-content-center">
-        <small className="text-center">Copyright © 2020 Dokuin.Js Team</small>
+        <small className="text-center text-white">
+          Copyright © 2020 Dokuin.js Team
+        </small>
       </Container>
     </div>
   )

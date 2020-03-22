@@ -1,10 +1,34 @@
 import React from 'react'
-import { Nav, Accordion, Card, AccordionToggle } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { makeStyles } from '@material-ui/core/styles'
+import ExpansionPanel from '@material-ui/core/ExpansionPanel'
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
+import Typography from '@material-ui/core/Typography'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+    marginTop: '2vh'
+  },
+  bgList: {
+    backgroundColor: '#e6e6e6',
+    boxShadow: 'none'
+  },
+  details: {
+    paddingBottom: '0'
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(18),
+    fontWeight: theme.typography.fontWeightRegular
+  }
+}))
 
 const Sidebar = () => {
+  const classes = useStyles()
+
   return (
-<<<<<<< HEAD:src/components/docs/Sidebar.jsx
     <div className={classes.root}>
       <ExpansionPanel className={classes.bgList}>
         <ExpansionPanelSummary
@@ -18,27 +42,25 @@ const Sidebar = () => {
           <Typography>
             <ul style={{ listStyle: 'none', paddingBottom: '0' }}>
               <li>
-<<<<<<< HEAD:src/components/docs/Sidebar.jsx
-                <Link style={{
-                  textDecoration:'none',
-                  color:'black'
-              }} to="/docs/getting-started">Installation</Link>
-=======
                 <Link
                   style={{
                     textDecoration: 'none',
                     color: 'black'
                   }}
-                  to="/docs/get-started"
+                  to="/docs/getting-started"
                 >
-                  Depedency
+                  Installation
                 </Link>
->>>>>>> pull development:src/components/Docs/Sidebar.jsx
               </li>
-              <Link style={{
-                  textDecoration:'none',
-                  color:'black'
-              }} to="/docs/next-step">Next Step</Link>
+              <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'black'
+                }}
+                to="/docs/next-step"
+              >
+                Next Step
+              </Link>
             </ul>
           </Typography>
         </ExpansionPanelDetails>
@@ -63,54 +85,6 @@ const Sidebar = () => {
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>
-=======
-    <Nav defaultActiveKey="/docs/get-started" className="flex-column w-100">
-      <Accordion defaultActiveKey="0">
-        <Card className="accordion-item">
-          <Card.Header className="border-0 nav-link">
-            <AccordionToggle as="div" eventKey="0" className="accordion-toggle">
-              Get Started
-            </AccordionToggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <NavLink to="/docs/get-started" className="nav-link">
-                Installation
-              </NavLink>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-        <Card className="accordion-item">
-          <Card.Header className="border-0 nav-link">
-            <AccordionToggle as="div" eventKey="1" className="accordion-toggle">
-              Usage
-            </AccordionToggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>
-              <NavLink to="/docs/usage" className="nav-link">
-                Usage
-              </NavLink>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-        <Card className="accordion-item">
-          <Card.Header className="border-0 nav-link">
-            <AccordionToggle as="div" eventKey="2" className="accordion-toggle">
-              Commands
-            </AccordionToggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="2">
-            <Card.Body>
-              <NavLink to="/" className="nav-link">
-                Commands
-              </NavLink>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
-    </Nav>
->>>>>>> pull dev:src/components/Docs/Sidebar.jsx
   )
 }
 

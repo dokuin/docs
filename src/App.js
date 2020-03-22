@@ -18,12 +18,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Homepage} />
 
-<<<<<<< HEAD
         <Route path="/docs/:list" component={Docs} />
 
-=======
-        <Route exact path="/docs/:list" component={Docs} />
->>>>>>> pull dev
         <Route path="*">
           <Redirect to="/" />
         </Route>

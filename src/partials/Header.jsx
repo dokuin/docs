@@ -1,50 +1,41 @@
 import React from 'react'
 import { Navbar, Nav, Container, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import DokuinImage from '../assets/dokuin-logo.png'
+import DokuinLogo from '../assets/logo dokuin.png'
 
 const Header = () => {
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      className="shadow-lg"
-      style={{ backgroundColor: '#216BBD' }}
+      className="m-0"
+      style={{ backgroundColor: 'transparant' }}
       sticky="top"
     >
-      <Container>
-        <Link to="/" className="router-link">
-          <Navbar.Brand as="div" href="#">
-            <Image src={DokuinImage} fluid={true} width={50} height={50} />
-          </Navbar.Brand>
-        </Link>
+      <Container className="m-0 d-flex justify-content-between">
+        <div>
+          <Link to="/" className="router-link">
+            <Navbar.Brand as="div" href="#">
+              <Image src={DokuinLogo} fluid={true} width={100} height={50} />
+            </Navbar.Brand>
+          </Link>
+        </div>
 
-        <Link to="/" className="router-link">
-          <Navbar.Brand as="div" className="text-white">
-            Dokuin.Js
-          </Navbar.Brand>
-        </Link>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <div>
           <Nav className="mr-auto">
             <Link to="/docs/getting-started" className="router-link">
-              <Nav.Link as="div" className="text-white">
+              <Nav.Link as="div" className="text-white font-weight-bold">
                 Docs
               </Nav.Link>
             </Link>
-            <Nav.Link href="#pricing" className="text-white">
+            <Nav.Link href="#pricing" className="text-white font-weight-bold">
               Template
             </Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="#deets" className="text-white">
-              Template
-            </Nav.Link>
-            <Nav.Link eventKey={2} href="#memes" className="text-white">
-              Template
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        </div>
+        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+        </Navbar.Collapse> */}
       </Container>
     </Navbar>
   )
