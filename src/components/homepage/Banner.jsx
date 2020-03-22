@@ -47,7 +47,7 @@ const Banner = () => {
         </Row>
       </Fade>
     </div>
-  )
+   )
 }
 
 export default Banner
