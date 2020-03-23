@@ -18,10 +18,6 @@ const CodeBlock = ({code}) => {
     
   }
 
-  // useEffect(() => {
-  //   console.log(copied)
-  // }, [copied])
-
   return (
     <div
     className="p-2 d-flex justify-content-between my-4"

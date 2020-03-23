@@ -8,6 +8,8 @@ import Usage from '../components/docs/getStarted/Usage'
 import Example from '../components/docs/example/Example'
 import Sidebar from '../components/docs/Sidebar'
 
+import { Fade } from 'react-reveal'
+
 const Docs = () => {
   
   return (
@@ -26,6 +28,7 @@ const Docs = () => {
   >
     <Sidebar />
   </Col>
+  <Fade right>
     <Container 
     style={{
       minHeight:'86vh',
@@ -51,6 +54,7 @@ const Docs = () => {
         </Col>
       </Row>
     </Container>
+    </Fade>
     </>
   )
 }
