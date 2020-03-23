@@ -32,7 +32,7 @@ const Banner = () => {
             <h3 className="font-weight-bold my-3" style={{ fontSize: '2.5vw' }}>
               Simple and easy open source API documentation maker
             </h3>
-            <Link to="/docs/dependency" className="banner-btn btn-1 mr-2">
+            <Link to="/docs/getting-started" className="banner-btn btn-1 mr-2">
               Get Started
             </Link>
 
@@ -47,7 +47,7 @@ const Banner = () => {
         </Row>
       </Fade>
     </div>
-   )
+  )
 }
 
 export default Banner
