@@ -69,13 +69,11 @@ const Header = () => {
                 </HoverText>
               </Nav.Link>
             </Link>
-            <Link to="/docs/getting-started" className="router-link">
+            <Link to="/docs/example" className="router-link">
               <Nav.Link as="div" className="text-white font-weight-bold">
               <HoverText>
-                Template
+                Example
                 </HoverText>
-
- 
               </Nav.Link>
             </Link>
           </Nav>

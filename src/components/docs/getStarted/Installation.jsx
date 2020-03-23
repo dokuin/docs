@@ -1,8 +1,12 @@
 import React from 'react'
 import CodeBlock from '../../CodeBlock'
+import { Link } from 'react-router-dom'
+import { ArrowForward } from '@material-ui/icons';
+
 
 const Installation = () => {
   return (
+    <div>
     <div className="my-5 ml-3 p-3 ">
       <h3 className="mb-3">Installation</h3>
       <h5>
@@ -25,10 +29,32 @@ const Installation = () => {
         </li>
         <li>
           <p>Install dokuinjs with script :</p>
-          <CodeBlock code={JSON.stringify('npm i dokuinjs')} />
+          <CodeBlock code={JSON.stringify('npm install -g dokuinjs')} />
         </li>
       </ol>
     </div>
+    <div className="ml-auto"
+    style={{
+      maxWidth:'10vw'
+    }} >
+        <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'white',
+                  backgroundColor:'#2C4054',
+                  borderRadius:'10px',
+                }}
+                className="px-5 p-2"
+                to="/docs/usage"
+              >
+                Usage
+                <ArrowForward className="ml-3"/>
+              </Link>
+    </div>
+    </div>
+
+     
+
   )
 }
 

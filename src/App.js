@@ -10,11 +10,14 @@ import Header from './partials/Header'
 import Footer from './partials/Footer'
 import Homepage from './pages/Homepage'
 import Docs from './pages/Docs'
+import ScrollTop from './components/ScrollTop'
+
 
 function App() {
   return (
     <Router>
       <Header />
+      <ScrollTop>
       <Switch>
         <Route exact path="/" component={Homepage} />
 
@@ -24,6 +27,7 @@ function App() {
           <Redirect to="/" />
         </Route>
       </Switch>
+      </ScrollTop>
       <Footer />
     </Router>
   )

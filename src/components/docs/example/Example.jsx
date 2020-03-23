@@ -263,7 +263,7 @@ Add more endpoints ? (yes / no) no`}
           </SyntaxHighlighter>
         </List>
         <List>
-          <Title>dokuin start</Title>
+          <Title>Convert responses</Title>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin start`}
           </SyntaxHighlighter>
@@ -277,6 +277,7 @@ Add more endpoints ? (yes / no) no`}
 ..
 `}
           </SyntaxHighlighter>
+        
         </List>
       </ol>
     </div>
