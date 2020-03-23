@@ -78,6 +78,12 @@ const Header = () => {
  
               </Nav.Link>
             </Link>
+
+            <Link to="/" className="router-link">
+              <Nav.Link as="div" className="text-white font-weight-bold">
+                Online Editor
+              </Nav.Link>
+            </Link>
           </Nav>
         </div>
       </Container>
