@@ -4,7 +4,7 @@ import React, { useState , useCallback} from 'react'
 
 
 import { Navbar, Nav, Container, Image } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link , useLocation} from 'react-router-dom'
 import DokuinLogo from '../assets/logo dokuin.png'
 
 import { useEffect } from 'react'
