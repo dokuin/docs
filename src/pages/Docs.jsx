@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Switch, Route } from 'react-router-dom'
+import ScrollTop from '../components/ScrollTop'
 
 import Installation from '../components/docs/getStarted/Installation'
 import Usage from '../components/docs/getStarted/Usage'
@@ -15,8 +16,8 @@ const Docs = () => {
     <>
 
       <Col
-        sm={2}
-        md={2}
+        sm={3}
+        md={3}
         className="overflow-auto position-fixed"
         id="sticky-sidebar"
         style={{
@@ -28,6 +29,7 @@ const Docs = () => {
       >
         <Sidebar />
       </Col>
+      
       <Container
         style={{
           minHeight: '86vh'
@@ -35,15 +37,16 @@ const Docs = () => {
         fluid
       >
         <Row className="mx-3">
-          <Col sm={2} md={2}></Col>
+          <Col sm={3} md={3}></Col>
           <Col
-            sm={8}
-            md={8}
+            sm={9}
+            md={9}
             style={{
-              marginLeft: '20px',
-              paddingRight: '10vw'
+              // marginLeft: '20px',
+              // paddingRight: '10vw'
             }}
-          >
+            >
+            <ScrollTop>
             <Switch>
               <Route
                 exact
@@ -53,6 +56,7 @@ const Docs = () => {
               <Route exact path="/:docs/usage" component={Usage} />
               <Route exact path="/:docs/example" component={Example} />
             </Switch>
+              </ScrollTop>
           </Col>
         </Row>
       </Container>

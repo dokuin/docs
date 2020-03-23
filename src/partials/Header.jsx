@@ -4,7 +4,7 @@ import React, { useState , useCallback} from 'react'
 
 
 import { Navbar, Nav, Container, Image } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link , useLocation} from 'react-router-dom'
 import DokuinLogo from '../assets/logo dokuin.png'
 
 import { useEffect } from 'react'
@@ -69,13 +69,11 @@ const Header = () => {
                 </HoverText>
               </Nav.Link>
             </Link>
-            <Link to="/docs/getting-started" className="router-link">
+            <Link to="/docs/example" className="router-link">
               <Nav.Link as="div" className="text-white font-weight-bold">
               <HoverText>
-                Template
+                Example
                 </HoverText>
-
- 
               </Nav.Link>
             </Link>
           </Nav>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import logo from '../assets/dokuin-logo.png'
 import styled from 'styled-components';
 
 const HoverText = styled.p`
@@ -44,12 +44,23 @@ const Footer = () => {
           <HoverText>Example</HoverText>
           </Link>
         </div>
+        <div className="d-flex flex-column">
+        <h5 style={{ color: "gray" }} className="mb-4">
+            Channel
+          </h5>
+          <a style={{textDecoration:'none'}}
+          target="_blank"
+          href='https://github.com/orgs/dokuin'>
+          <HoverText>Github</HoverText>
+          </a>
+
+        </div>
+        <div className="d-flex flex-column">
+          <img src={logo} height={60}/>
         <small className="text-center text-white">
           Copyright © 2020 Dokuin.js Team
         </small>
-        <small className="text-center text-white">
-          Copyright © 2020 Dokuin.js Team
-        </small>
+        </div>
       </Container>
     </div>
   );

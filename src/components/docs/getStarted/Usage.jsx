@@ -1,9 +1,13 @@
 import React from 'react'
 
 import CodeBlock from '../../CodeBlock'
+import { Link } from 'react-router-dom'
+import { ArrowForward, ArrowBack } from '@material-ui/icons';
+
 
 const Usage = () => {
   return (
+    <div>
     <div className="my-5 ml-3 p-3 ">
       <h3 className="mb-4">Usage</h3>
       <h5 className="mb-5">Learn step by step how to use Dokuin.js.</h5>
@@ -94,7 +98,37 @@ const Usage = () => {
           </p>
         </li>
       </ol>
+    <div className="d-flex justify-content-between">
+       <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'white',
+                  backgroundColor:'#2C4054',
+                  borderRadius:'10px',
+                }}
+                className="px-5 p-2"
+                to="/docs/getting-started"
+              >
+                <ArrowBack className="ml-3"/>
+                installation
+              </Link>
+        <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'white',
+                  backgroundColor:'#2C4054',
+                  borderRadius:'10px',
+                }}
+                className="px-5 p-2"
+                to="/docs/example"
+              >
+                Example
+                <ArrowForward className="ml-3"/>
+              </Link>
     </div>
+    </div>
+    </div>
+
   )
 }
 

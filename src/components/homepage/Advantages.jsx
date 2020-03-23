@@ -21,7 +21,9 @@ const Advantages = () => {
         <h2
           className="text-center font-weight-bold my-auto"
           style={{
-            fontSize: '3em'
+            fontSize: '3em',
+            paddingBottom:'20px',
+            // borderBottom:'10px solid #3FC1C9'
           }}
         >
           Why Dokuin.js?
@@ -33,10 +35,14 @@ const Advantages = () => {
           <Fade bottom>
             <Row className="d-flex flex-row-reverse">
               <Col sm={12} md={6} lg={6} className="my-auto">
+                <div style={{
+                  borderRight:'10px solid #3FC1C9'
+                }}>
                 <h1 className="text-center">Open Source</h1>
                 <p className="my-3 text-center">
                   Dokuin.js is open source, feel free to use it.
                 </p>
+                </div>
               </Col>
               <Col sm={12} md={6} lg={6}>
                 <Image src={OpenSourcePng} fluid />
@@ -51,11 +57,16 @@ const Advantages = () => {
           <Fade left>
             <Row>
               <Col sm={12} md={6} lg={6} className="my-auto">
+                <div style={{
+                  borderLeft:'10px solid #ff0da2',
+                  paddingLeft:'30px'
+                }}>
                 <h1 className="text-center">Easy Usage</h1>
                 <p className="my-3 text-justify">
                   Don’t have time to make Documentation? Dokuin.js makes it
                   easier for you. With easy to use commands for a quick usage.
                 </p>
+                </div>
               </Col>
               <Col sm={12} md={6} lg={6}>
                 <Image src={EasyUsagePng} fluid />
