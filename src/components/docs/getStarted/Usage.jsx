@@ -1,21 +1,19 @@
-import React from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import React from 'react'
 
-import CodeBlock from "../../CodeBlock";
+import CodeBlock from '../../CodeBlock'
 
 const Usage = () => {
   return (
-    <div className="ml-3 p-3 ">
-      <h3>Usage</h3>
-      <br />
-      <br />
+    <div className="my-5 ml-3 p-3 ">
+      <h3 className="mb-4">Usage</h3>
+      <h5 className="mb-5">Learn step by step how to use Dokuin.js.</h5>
       <ol>
         <li>
-          <h5>first thing you should do is run dokuinjs script :</h5>
-          <CodeBlock code={JSON.stringify("dokuin init")} />
+          <p>First, initialize Dokuin.js script :</p>
+          <CodeBlock code={JSON.stringify('   dokuin init')} />
         </li>
         <li>
-          <h5>now enter about your projects :</h5>
+          <p>Enter your project detail :</p>
           <CodeBlock
             code={JSON.stringify(`
   Project's Name : <example>
@@ -26,68 +24,78 @@ const Usage = () => {
           />
         </li>
         <li>
-          <h5
+          <p
             style={{
-              display: "inline "
+              display: 'inline '
             }}
           >
-            make sure your project is already done. with this command you can
-            write your endpoints as many as you want and dokuin will put them in
-            one file. Run dokuinjs script :
-          </h5>
-          <CodeBlock code={JSON.stringify("dokuin create")} />
-          <p>it will must be showing like this</p>
-          <CodeBlock code={JSON.stringify(`
-          Fill these to create endpoints
+            Make sure the initialize process is done. And then you can insert an
+            endpoint.
+          </p>
+          <div className="card p-2 bg-warning my-2">
+            <p className="my-auto">
+              <b>Note</b> : You can insert more than one endpoint.
+            </p>
+          </div>
+          <CodeBlock code={JSON.stringify('   dokuin create')} />
+          <p>It will be showing up like this :</p>
+          <CodeBlock
+            code={JSON.stringify(`
+    Fill these to create endpoints
 
-          HTPP Method: <GET/PUT/PATCH/POST/DELETE>
-          Path: <your url path ex:'/allproducts>
-          Add Headers ? (yes or no)
-          Add Query Params ? (yes or no)
-          Add Request Body ? (yes or no)
-          Add More enpoints ? (yes or no)
-          ✔ your endpoints have been created`)} />
-         
+    HTPP Method: <GET/PUT/PATCH/POST/DELETE>
+    Path: <your url path ex:'/allproducts>
+    Add Headers ? (yes or no)
+    Add Query Params ? (yes or no)
+    Add Request Body ? (yes or no)
+    Add More enpoints ? (yes or no)
+    ✔ your endpoints have been created`)}
+          />
         </li>
         <li>
-          <h5
+          <p
             style={{
-              display: "inline "
+              display: 'inline '
             }}
           >
-            type this command, dokuinjs will run all your endpoint and after
-            that it will make one file about your endpoints result
-          </h5>
-          <CodeBlock code={JSON.stringify("dokuin run")} />
-          <p>it will must be showing like this</p>
-          <CodeBlock code={JSON.stringify(`✔ Got response with code 200: OK from <url>`)}/>
+            Run Dokuin.js, the script will run all your endpoint and make it a
+            single file.
+          </p>
+          <CodeBlock code={JSON.stringify('   dokuin run')} />
+          <p>It will be showing up like this :</p>
+          <CodeBlock
+            code={JSON.stringify(
+              `    ✔ Got response with code 200: OK from <url>`
+            )}
+          />
         </li>
         <li>
-          <h5
+          <p
             style={{
-              display: "inline "
+              display: 'inline '
             }}
           >
-            after your endpoints result file is already done, it is time for you
-            to convert it to md file
-          </h5>
-          <CodeBlock code={JSON.stringify(`
+            After your endpoints result file is done, we can convert it to a
+            markdown (".md") file.
+          </p>
+          <CodeBlock
+            code={JSON.stringify(`
   dokuin convert 
-  ✔ Successfully converted into MD!`
-          )} />
+  ✔ Successfully converted into MD!`)}
+          />
         </li>
         <li>
-          <h5
+          <p
             style={{
-              display: "inline "
+              display: 'inline '
             }}
           >
-            finnaly check your project folder , there is .md files you just created
-          </h5>
+            Finally, check your local files for the converted ".md" file.
+          </p>
         </li>
       </ol>
     </div>
-  );
-};
+  )
+}
 
-export default Usage;
+export default Usage

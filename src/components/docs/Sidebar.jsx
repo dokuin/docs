@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
   bgList: {
     backgroundColor: '#e6e6e6',
     boxShadow: 'none',
-    "&:hover": {
-      background: "#efefef"
+    '&:hover': {
+      background: '#efefef'
     }
   },
   details: {
@@ -42,41 +42,46 @@ const Sidebar = () => {
           <Typography className={classes.heading}>Geting Started</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.details}>
-          
-             <ul style={{ listStyle: "none", paddingBottom: "0" }}>
-              <li style={{
-                marginBottom:'10px'
-              }}>
-              <Link style={{
-                textDecoration:'none',
-                color:'black',
-              }} to="/docs/getting-started">Installation</Link>
-              </li>
-              <li style={{
-                marginBottom:'10px'
-              }}>
-              <Link style={{
-                textDecoration:'none',
-                color:'black'
-              }} to="/docs/usage">Usage</Link>
-              </li>
-            </ul> 
-            <Typography>
-          </Typography>
+          <ul style={{ listStyle: 'none', paddingBottom: '0' }}>
+            <li className="mb-4">
+              <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'black'
+                }}
+                to="/docs/getting-started"
+              >
+                Installation
+              </Link>
+            </li>
+            <li className="mb-4">
+              <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'black'
+                }}
+                to="/docs/usage"
+              >
+                Usage
+              </Link>
+            </li>
+          </ul>
+          <Typography></Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
       <ExpansionPanel className={classes.bgList}>
-        <Link 
-        style={{
-          textDecoration:'none',
-          color:'black'
-        }}
-        to='/docs/example'>
+        <Link
+          style={{
+            textDecoration: 'none',
+            color: 'black'
+          }}
+          to="/docs/example"
+        >
           <div className="d-flex align-items-center justify-content-start pl-4 py-2">
-          <Typography className={classes.heading}>Example</Typography>
+            <Typography className={classes.heading}>Example</Typography>
           </div>
-          </Link>
+        </Link>
       </ExpansionPanel>
     </div>
   )
