@@ -1,7 +1,12 @@
+
 import React, { useState , useCallback} from 'react'
+
+
+
 import { Navbar, Nav, Container, Image } from 'react-bootstrap'
-import { Link, useParams, useLocation} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import DokuinLogo from '../assets/logo dokuin.png'
+
 import { useEffect } from 'react'
 import styled from 'styled-components'
 
@@ -34,12 +39,15 @@ const Header = () => {
          
   },[setBg])
 
+
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
       className="m-0 d-flex justify-content-center"
+
       style={setBg()}
+
       sticky="top"
     >
       <Container className="m-0 d-flex justify-content-between">
@@ -53,6 +61,7 @@ const Header = () => {
 
         <div>
           <Nav className="">
+
             <Link to="/docs/getting-started" className="router-link" >
               <Nav.Link as="div" className="text-white font-weight-bold">
                 <HoverText>
@@ -65,6 +74,8 @@ const Header = () => {
               <HoverText>
                 Template
                 </HoverText>
+
+ 
               </Nav.Link>
             </Link>
           </Nav>

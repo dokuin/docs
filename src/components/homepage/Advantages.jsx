@@ -80,7 +80,7 @@ const Advantages = () => {
                   Simple setup with just few steps of installation, then you're
                   good to go.
                 </p>
-                <Link to="/docs/dependency" className="banner-btn btn-1">
+                <Link to="/docs/getting-started" className="banner-btn btn-1">
                   Get Started
                 </Link>
               </Col>
