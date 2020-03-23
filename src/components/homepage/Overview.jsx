@@ -8,7 +8,7 @@ import OverviewPng from '../../assets/overview_coding.svg'
 const Overview = () => {
   return (
     <div className="py-5" style={{ backgroundColor: '#59ADB5CC' }}>
-      <Fade bottom>
+      <Fade top>
         <Container className="d-flex flex-column align-items-center">
           <Image
             src={OverviewPng}

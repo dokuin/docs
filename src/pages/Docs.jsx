@@ -8,9 +8,12 @@ import Usage from '../components/docs/getStarted/Usage'
 import Example from '../components/docs/example/Example'
 import Sidebar from '../components/docs/Sidebar'
 
+import { Fade } from 'react-reveal'
+
 const Docs = () => {
   return (
     <>
+
       <Col
         sm={2}
         md={2}
@@ -53,6 +56,7 @@ const Docs = () => {
           </Col>
         </Row>
       </Container>
+
     </>
   )
 }
