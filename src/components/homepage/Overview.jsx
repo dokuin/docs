@@ -9,7 +9,7 @@ import OverviewPng from '../../assets/overview_coding.svg'
 const Overview = () => {
   return (
     <div className="py-5" style={{ backgroundColor: '#3FC1C9' }}>
-      <Fade top>
+      <Fade bottom>
         <Container className="d-flex flex-column align-items-center">
           <Image
             src={OverviewPng}
@@ -22,12 +22,13 @@ const Overview = () => {
             Dokuin.js is an NPM package designed for programmers who lack or
             even don't have time to create documentation. Dokuin.js is very easy
             to install and with just a few simple steps your documentation will
-            be ready.<br/>
-            Follow these <Link to='/docs/getting-started'>guidelines</Link> to get started.
-         
+            be ready.
+            <br />
+            Follow these <Link to="/docs/getting-started">guidelines</Link> to
+            get started.
           </h2>
         </Container>
-        </Fade>
+      </Fade>
     </div>
   )
 }
