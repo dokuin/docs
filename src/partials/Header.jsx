@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 
 import { Navbar, Nav, Container, Image } from 'react-bootstrap'
 import { Link, useLocation } from 'react-router-dom'
-import DokuinLogo from '../assets/logo dokuin.png'
+import DokuinLogo from '../assets/dokuin-logo.png'
 
 import { useEffect } from 'react'
 import styled from 'styled-components'
