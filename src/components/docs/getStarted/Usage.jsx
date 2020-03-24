@@ -3,6 +3,7 @@ import React from 'react'
 import CodeBlock from '../../CodeBlock'
 import { Link } from 'react-router-dom'
 import { ArrowForward, ArrowBack } from '@material-ui/icons';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 
 const Usage = () => {
@@ -93,7 +94,7 @@ const Usage = () => {
             style={{
               display: 'inline '
             }}
-          >
+            >
             Finally, check your local files for the converted ".md" file.
           </p>
         </li>
