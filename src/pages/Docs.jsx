@@ -32,7 +32,7 @@ const Docs = () => {
       
       <Container
         style={{
-          minHeight: '86vh'
+          minHeight: '90vh'
         }}
         fluid
       >
