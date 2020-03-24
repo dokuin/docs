@@ -22,7 +22,7 @@ const Advantages = () => {
           className="text-center font-weight-bold my-auto"
           style={{
             fontSize: '3em',
-            paddingBottom:'20px',
+            paddingBottom: '20px'
             // borderBottom:'10px solid #3FC1C9'
           }}
         >
@@ -30,18 +30,21 @@ const Advantages = () => {
         </h2>
       </div>
 
-      <div className="section d-flex align-items-center bg-light py-5">
+      <div className="section d-flex align-items-center py-5">
         <Container>
           <Fade bottom>
             <Row className="d-flex flex-row-reverse">
               <Col sm={12} md={6} lg={6} className="my-auto">
-                <div style={{
-                  borderRight:'10px solid #3FC1C9'
-                }}>
-                <h1 className="text-center">Open Source</h1>
-                <p className="my-3 text-center">
-                  Dokuin.js is open source, feel free to use it.
-                </p>
+                <div
+                  style={{
+                    borderRight: '10px solid #3FC1C9',
+                    paddingRight: '30px'
+                  }}
+                >
+                  <h1 className="text-center">Open Source</h1>
+                  <p className="my-3 text-center">
+                    Dokuin.js is open source, feel free to use it.
+                  </p>
                 </div>
               </Col>
               <Col sm={12} md={6} lg={6}>
@@ -52,20 +55,22 @@ const Advantages = () => {
         </Container>
       </div>
 
-      <div className="section d-flex align-items-center bg-light py-5">
+      <div className="section d-flex align-items-center py-5 my-3 bg-light">
         <Container>
           <Fade left>
             <Row>
               <Col sm={12} md={6} lg={6} className="my-auto">
-                <div style={{
-                  borderLeft:'10px solid #ff0da2',
-                  paddingLeft:'30px'
-                }}>
-                <h1 className="text-center">Easy Usage</h1>
-                <p className="my-3 text-justify">
-                  Don’t have time to make Documentation? Dokuin.js makes it
-                  easier for you. With easy to use commands for a quick usage.
-                </p>
+                <div
+                  style={{
+                    borderLeft: '10px solid #ff0da2',
+                    paddingLeft: '30px'
+                  }}
+                >
+                  <h1 className="text-center">Easy Usage</h1>
+                  <p className="my-3 text-justify">
+                    Don’t have time to make a documentation? Dokuin.js make it
+                    easier for you. With easy to use commands for a quick usage.
+                  </p>
                 </div>
               </Col>
               <Col sm={12} md={6} lg={6}>
@@ -76,7 +81,7 @@ const Advantages = () => {
         </Container>
       </div>
 
-      <div className="section d-flex align-items-center bg-light py-5">
+      <div className="section d-flex align-items-center py-5 my-3">
         <Container>
           <Fade right>
             <Row className="d-flex flex-row-reverse">
@@ -85,11 +90,14 @@ const Advantages = () => {
                 md={6}
                 lg={6}
                 className="my-auto d-flex flex-column align-items-center"
+                style={{
+                  borderRight: '10px solid #ff0da2',
+                  paddingRight: '30px'
+                }}
               >
                 <h1 className="text-center">Simple Setup</h1>
                 <p className="my-3 text-center">
-                  Simple setup with just few steps of installation, then you're
-                  good to go.
+                  Simple setup with just few steps of installation.
                 </p>
                 <Link to="/docs/getting-started" className="banner-btn btn-1">
                   Get Started

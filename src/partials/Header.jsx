@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useState, useCallback } from 'react'
 
 import { Navbar, Nav, Container, Image } from 'react-bootstrap'
@@ -24,6 +25,7 @@ const Header = () => {
     setPost(scrolled)
   })
 
+  // eslint-disable-next-line
   const setBg = () => {
     if (position > 250 || param !== '/') {
       return { backgroundColor: '#1a2840' }
@@ -50,32 +52,25 @@ const Header = () => {
           </Link>
         </div>
 
-        <div>
-          <Nav className="">
-            <Link to="/docs/getting-started" className="router-link">
-              <Nav.Link as="div" className="text-white font-weight-bold">
-                <HoverText>Docs</HoverText>
-              </Nav.Link>
-            </Link>
-            <Link to="/docs/example" className="router-link">
-              <Nav.Link as="div" className="text-white font-weight-bold">
-                <HoverText>Example</HoverText>
-              </Nav.Link>
-            </Link>
+        <Nav className="">
+          <Link to="/docs/getting-started" className="router-link my-auto">
+            <Nav.Link as="div" className="text-white font-weight-bold">
+              <HoverText className="my-auto">Docs</HoverText>
+            </Nav.Link>
+          </Link>
 
-            <Link to="/" className="router-link">
-              <Nav.Link as="div" className="text-white font-weight-bold">
-                Online Editor
-              </Nav.Link>
-            </Link>
+          <Link to="/docs/example" className="router-link my-auto">
+            <Nav.Link as="div" className="text-white font-weight-bold">
+              <HoverText className="my-auto">Example</HoverText>
+            </Nav.Link>
+          </Link>
 
-            <Link to="/" className="router-link">
-              <Nav.Link as="div" className="text-white font-weight-bold">
-                Online Editor
-              </Nav.Link>
-            </Link>
-          </Nav>
-        </div>
+          <Link to="/" className="router-link my-auto">
+            <Nav.Link as="div" className="text-white font-weight-bold">
+              <HoverText className="my-auto">Online Editor</HoverText>
+            </Nav.Link>
+          </Link>
+        </Nav>
       </Container>
     </Navbar>
   )

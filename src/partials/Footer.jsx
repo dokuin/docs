@@ -15,7 +15,7 @@ const HoverText = styled.p`
 const Footer = () => {
   return (
     <div
-      className="footer py-3 m-0"
+      className="footer py-5 m-0"
       style={{
         position: 'relative',
         backgroundColor: '#2C4054',
