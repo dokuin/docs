@@ -1,8 +1,11 @@
-import React from "react";
+import React ,{ useEffect} from "react";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import styled from "styled-components";
+import ToSection from 'react-scrollable-anchor'
+import { configureAnchors } from 'react-scrollable-anchor'
+
 
 const List = styled.li`
    {
@@ -18,6 +21,9 @@ const Title = styled.h5`
 `;
 
 const Example = () => {
+  useEffect(()=>{
+    configureAnchors({offset: -80, scrollDuration: 200})
+  },[])
   return (
     <div className="my-5 ml-3 p-3 ">
       <h3 className="mb-3">Example</h3>
@@ -25,14 +31,18 @@ const Example = () => {
         fontWeight:'800',
       }}>
         <List>
+          <ToSection id={'install'}>
           <Title>install dokuin.js</Title>
+          </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ npm install -g dokuinjs`}
           </SyntaxHighlighter>
         </List>
 
         <List>
+        <ToSection id={'config'}>
           <Title>make config file</Title>
+          </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin init`}
           </SyntaxHighlighter>
@@ -45,7 +55,9 @@ Author : meggy`}
         </List>
 
         <List>
+        <ToSection id={'endpoint'}>
           <Title>Create endpoint list</Title>
+          </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin start`}
           </SyntaxHighlighter>
@@ -108,7 +120,9 @@ Add more endpoints ? (yes / no) : no`}
           </SyntaxHighlighter>
         </List>
         <List>
+        <ToSection id={'showendpoint'}>
           <Title>Show endpoint list</Title>
+          </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin start`}
           </SyntaxHighlighter>
@@ -131,7 +145,9 @@ Add more endpoints ? (yes / no) : no`}
           </SyntaxHighlighter>
         </List>
         <List>
+        <ToSection id={'delete'}>
           <Title>Delete One Of endpoints</Title>
+          </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin start`}
           </SyntaxHighlighter>
@@ -158,7 +174,9 @@ Add more endpoints ? (yes / no) : no`}
           </SyntaxHighlighter>
         </List>
         <List>
+        <ToSection id={'tolist'}>
           <Title>Add new endpoints to the list</Title>
+          </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin start`}
           </SyntaxHighlighter>
@@ -191,7 +209,9 @@ Add more endpoints ? (yes / no) no`}
           </SyntaxHighlighter>
         </List>
         <List>
+        <ToSection id={'update'}>
           <Title>Update an endpoint on the list</Title>
+          </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin start`}
           </SyntaxHighlighter>
@@ -203,51 +223,51 @@ Add more endpoints ? (yes / no) no`}
 ..
 [x]  Update new endpoints into endpoints list
 ..
-`}
-          </SyntaxHighlighter>
-          <SyntaxHighlighter language="javascript" style={atomDark}>
-            {`----------------------------------------------------------------------
-|(index)|  id |  Method  |          Path         |    Description    |
-|   1   |  1  |   GET    | http://localhost:3000 | Get all movies    |
-----------------------------------------------------------------------
-[ ] HTTP Method
-[ ] Path
-[ ] Description
-[X] Query Params
-[ ] Request Body
-`}
-          </SyntaxHighlighter>
-        </List>
-        <List>
-          <Title>Update an endpoint on the list</Title>
-          <SyntaxHighlighter language="javascript" style={atomDark}>
-            {`$ dokuin start`}
-          </SyntaxHighlighter>
-          <SyntaxHighlighter language="javascript" style={atomDark}>
-            {`Please choose 1 command :
 
-..
-..
-..
-[x]  Update new endpoints into endpoints list
-..
+Which endpoint 
+[x] GET, http://localhost:3000
+[ ] POST, http://localhost:3000/login
+
+[ ] method
+[ ] description
+[ ] path
+[ ] query 
+[x] body
+
+`}
+          </SyntaxHighlighter>
+       
+          <SyntaxHighlighter language="javascript" style={atomDark}>
+            {`Current Value
+key: username, value: caeasaradam
+value: <updated value> 
+More update ? (yes / no) yes 
+
+[x] GET, http://localhost:3000
+[ ] POST, http://localhost:3000/login
+
 `}
           </SyntaxHighlighter>
           <SyntaxHighlighter language="javascript" style={atomDark}>
-            {`----------------------------------------------------------------------
-|(index)|  id |  Method  |          Path         |    Description    |
-|   1   |  1  |   GET    | http://localhost:3000 | Get all movies    |
-----------------------------------------------------------------------
-[ ] HTTP Method
-[ ] Path
-[ ] Description
-[X] Query Params
-[ ] Request Body
+            {`
+Which key 
+[x] method
+[ ] description
+[ ] path
+[ ] query 
+[ ] body
+
+Current Value: GET
+HTTP Method:  <updated method> 
+More Update ? (yes / no) no
+
 `}
           </SyntaxHighlighter>
         </List>
         <List>
+        <ToSection id={'run'}>
           <Title>Run endpoint list</Title>
+            </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin start`}
           </SyntaxHighlighter>
@@ -263,7 +283,9 @@ Add more endpoints ? (yes / no) no`}
           </SyntaxHighlighter>
         </List>
         <List>
+        <ToSection id={'convert'}>
           <Title>Convert responses</Title>
+            </ToSection>
           <SyntaxHighlighter language="javascript" style={atomDark}>
             {`$ dokuin start`}
           </SyntaxHighlighter>
