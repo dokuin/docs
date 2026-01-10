@@ -8929,9 +8929,9 @@ style-loader@^3.3.1:
   integrity sha512-GPcQ+LDJbrcxHORTRes6Jy2sfvK2kS6hpSfI/fXhPt+spVzxF6LJ1dHLN9zIGmVaaP044YKaIatFaufENRiDoQ==
 
 styled-components@^6.0.0:
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-6.3.2.tgz#1f6f8a287004d8a65896e1409322d6cc3b366193"
-  integrity sha512-xS6FKYasu/BHBfgnGiI6hjIEh4Jb2dqxMQrESwV6ZA2u508kyJA/Zu8dNbCZlnXs1XKFwS3+gye6hhVfNEI+IQ==
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-6.3.3.tgz#430d44ac3e8e8b1c4d59ddfcb04f6b823a23c818"
+  integrity sha512-5jBZzBWCHeyEBF2+sBJZ2J9nFpYqB0hIuhvBz8WZ2rZpSvRCf9RlSRZ1RCJ/6613DUx8WD9x6RP5Qcs6hCXtCw==
   dependencies:
     "@emotion/is-prop-valid" "1.4.0"
     "@emotion/unitless" "0.10.0"
